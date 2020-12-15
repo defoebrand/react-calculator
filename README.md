@@ -28,7 +28,7 @@ The project is a react calculator app designed to perform basic calculations. By
 
 
 ## Live Demo
-Try it out [here](https://herokuapp.calculator.com)
+Try it out [here](https://git.heroku.com/defoebrand-react-calculator.git)
 #### Deployed on: Heroku
 
 
