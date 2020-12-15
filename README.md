@@ -6,16 +6,16 @@ The project is a react calculator app designed to perform basic calculations. By
 
 #### ![screenshot](src/assets/screenshot.png)
 
-#### Features 
+#### Features
 
  -  Offers users easy to read large print buttons
- -  Utilizes a large print graphic display 
+ -  Utilizes a large print graphic display
  -  Incorporates every basic operator plus the modulo operator (instead of a percent key)
 
-###### Coming Features 
+###### Coming Features
  -  Enhanced syntax inputting
  -  Display of previous calculations until cleared
- -  Enhanced styling 
+ -  Enhanced styling
 
  ## Built With
 
