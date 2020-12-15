@@ -1,5 +1,5 @@
 .displayContainer {
-  width: 50vw;
+  width: 275px;
   margin: 15px auto 0;
   text-align: right;
   border: 1px solid black;
@@ -13,7 +13,7 @@
 }
 
 .buttonPanel {
-  max-width: 50vw;
+  width: 275px;
   margin: 0 auto;
   text-align: center;
   border: 1px solid black;

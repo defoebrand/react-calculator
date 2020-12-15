@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
 
 const clickMe = value => {
-  alert(value);
+  document.getElementById(value).style.color = 'blue';
 };
+
 const Button = ({ name }) => (
-  <button type="button" onClick={() => { clickMe(name); }}>{name}</button>
+  <button type="button" id={name} onClick={() => { clickMe(name); }}>{name}</button>
 );
 
 Button.propTypes = {
   name: PropTypes.string,
 };
 Button.defaultProps = {
-  name: 'x',
+  name: 'Empty',
 };
 
 export default Button;
