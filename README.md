@@ -4,7 +4,7 @@
 
 The project is a react calculator app designed to perform basic calculations. By simply inputting a value, an operator, and another value it will return the final calculation of the input given.
 
-#### ![screenshot](src/assets/screenshot.png)
+###### Screenshot coming soon!
 
 #### Features
 
@@ -28,7 +28,7 @@ The project is a react calculator app designed to perform basic calculations. By
 
 
 ## Live Demo
-Try it out [here](https://git.heroku.com/defoebrand-react-calculator.git)
+Try it out [here](https://defoebrand-react-calculator.herokuapp.com)
 #### Deployed on: Heroku
 
 
