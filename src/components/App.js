@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Display result="Hello!" />
-      <ButtonPanel />
+      <ButtonPanel calculate={calculate} />
     </>
   );
 }
