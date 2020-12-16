@@ -22,7 +22,9 @@ const calculate = (calculatorData, buttonName) => {
     next = '';
     operation = '';
   } else if (buttonName.match(/[=]/)) {
-    operate(total, next, operation);
+    total = operate(total, next, operation);
+    next = '';
+    operation = '';
   } else {
     operation = buttonName;
   }
