@@ -17,20 +17,33 @@ class App extends React.Component {
   }
 
     handleClick = buttonName => {
-      const result = calculate(this, buttonName);
+      const data = this.state;
+      const result = calculate(data, buttonName);
       this.setState({
         total: result.total,
         next: result.next,
         operation: result.operation,
       });
-      console.log(this.state);
     }
 
     render() {
-      const { total } = this.state;
+      const { next, total, operation } = this.state;
+      let display;
+      if (next) {
+        display = <Display result={`${next}`} />;
+      } else {
+        display = <Display result="Hello!" />;
+      }
+      if (operation) {
+        display = <Display result={`${next} ${operation}`} />;
+      }
+      if (total) {
+        display = <Display result={`${total} ${operation} ${next}`} />;
+      }
       return (
         <>
-          <Display result={total} />
+
+          {display}
           <ButtonPanel clickHandler={e => this.handleClick(e.target.innerText)} />
         </>
       );

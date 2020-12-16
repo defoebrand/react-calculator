@@ -1,16 +1,28 @@
-// import operate from './operate';
+import operate from './operate';
 
 const calculate = (calculatorData, buttonName) => {
   let { total, next, operation } = calculatorData;
   if (buttonName.match(/\d|[.]/)) {
-    total = buttonName;
-    next = buttonName;
+    if (operation === null) {
+      if (next === null) {
+        next = buttonName;
+      } else {
+        next += buttonName;
+      }
+    } else if (total === null) {
+      total = next;
+      next = buttonName;
+    } else {
+      next += buttonName;
+    }
   } else if (buttonName.match(/[^+][-$]/)) {
-    total *= -1;
+    next = `${next * -1}`;
   } else if (buttonName.match(/[AC]/)) {
     total = '';
     next = '';
     operation = '';
+  } else if (buttonName.match(/[=]/)) {
+    operate(total, next, operation);
   } else {
     operation = buttonName;
   }
