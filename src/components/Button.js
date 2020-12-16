@@ -1,7 +1,15 @@
 import PropTypes from 'prop-types';
 
+import calculate from '../logic/calculate';
+
+const calculatorData = {
+  total: '',
+  operation: '',
+  next: '',
+};
+
 const Button = ({ name, group }) => (
-  <button type="button" className={`button ${group}`}>{name}</button>
+  <button type="button" className={`button ${group}`} onClick={() => { calculate(name, calculatorData); }}>{name}</button>
 );
 
 Button.propTypes = {
