@@ -16,8 +16,14 @@ class App extends React.Component {
     this.handleClick.bind(this);
   }
 
-    handleClick = e => {
-      calculate(this.state, e.target.innerText);
+    handleClick = buttonName => {
+      const result = calculate(this, buttonName);
+      this.setState({
+        total: result.total,
+        next: result.next,
+        operation: result.operation,
+      });
+      console.log(this.state);
     }
 
     render() {
@@ -25,7 +31,7 @@ class App extends React.Component {
       return (
         <>
           <Display result={total} />
-          <ButtonPanel clickHandler={this.handleClick} />
+          <ButtonPanel clickHandler={e => this.handleClick(e.target.innerText)} />
         </>
       );
     }
