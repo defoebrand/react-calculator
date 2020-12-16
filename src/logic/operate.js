@@ -3,6 +3,7 @@ import Big from 'big.js';
 const operate = (numberOne, numberTwo, operation) => {
   const display = document.querySelector('.displayOutput');
   let result = '';
+
   const firstNumber = new Big(numberOne);
   const secondNumber = new Big(numberTwo);
 

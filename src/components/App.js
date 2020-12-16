@@ -5,13 +5,30 @@ import ButtonPanel from './ButtonPanel';
 
 import calculate from '../logic/calculate';
 
-function App() {
-  return (
-    <>
-      <Display result="Hello!" />
-      <ButtonPanel />
-    </>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+    this.handleClick.bind(this);
+  }
+
+    handleClick = e => {
+      calculate(this.state, e.target.innerText);
+    }
+
+    render() {
+      const { total } = this.state;
+      return (
+        <>
+          <Display result={total} />
+          <ButtonPanel clickHandler={this.handleClick} />
+        </>
+      );
+    }
 }
 
 export default App;
