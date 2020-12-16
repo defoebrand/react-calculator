@@ -1,17 +1,21 @@
-const operate = data => {
+import Big from 'big.js';
+
+const operate = (numberOne, numberTwo, operation) => {
   const display = document.querySelector('.displayOutput');
   let result = '';
+  const firstNumber = new Big(numberOne);
+  const secondNumber = new Big(numberTwo);
 
-  if (data.operation === '+') {
-    result = Number(data.total) + Number(data.next);
-  } else if (data.operation === '-') {
-    result = Number(data.total) - Number(data.next);
-  } else if (data.operation === 'x') {
-    result = Number(data.total) * Number(data.next);
-  } else if (data.operation === '/') {
-    result = Number(data.total) / Number(data.next);
-  } else if (data.operation === '%') {
-    result = Number(data.total) % Number(data.next);
+  if (operation === '+') {
+    result = firstNumber.plus(secondNumber);
+  } else if (operation === '-') {
+    result = firstNumber.minus(secondNumber);
+  } else if (operation === 'x') {
+    result = firstNumber.times(secondNumber);
+  } else if (operation === '/') {
+    result = firstNumber.div(secondNumber);
+  } else if (operation === '%') {
+    result = firstNumber.mod(secondNumber);
   }
 
   display.textContent = result;

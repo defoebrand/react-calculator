@@ -1,25 +1,47 @@
 import operate from './operate';
 
-const calculate = (buttonValue, data) => {
-  const operation = data;
+const calculatorData = {
+  total: 0,
+  next: 0,
+  operation: '',
+};
+
+const calculate = (calculatorData, buttonName) => {
+  const data = calculatorData;
   const display = document.querySelector('.displayOutput');
 
-  if (buttonValue.match(/\d/)) {
+  if (buttonName.match(/\d|[.]/)) {
     if (display.textContent === 'Hello!') {
-      operation.total = buttonValue;
-      display.textContent = buttonValue;
+      data.total = buttonName;
+      display.textContent = buttonName;
     } else if (display.textContent.match(/[+|-|/|%|x]/)) {
-      operation.next += buttonValue;
-      display.textContent += `${buttonValue}`;
+      data.next += buttonName;
+      display.textContent += `${buttonName}`;
     } else {
-      operation.total += buttonValue;
-      display.textContent += buttonValue;
+      data.total += buttonName;
+      display.textContent += buttonName;
     }
-  } else if (buttonValue.match(/=/)) {
-    operate(operation);
+  } else if (buttonName.match(/[^+][-$]/)) {
+    if (display.textContent.match(/[+|-|/|%|x]/)) {
+      data.next *= -1;
+      display.textContent = `${data.total} ${data.operation} ${data.next}`;
+    } else {
+      data.total *= -1;
+      display.textContent = data.total;
+    }
+  } else if (buttonName.match(/[AC]/)) {
+    data.total = '';
+    data.next = '';
+    data.operation = '';
+    display.textContent = 'Hello!';
+  } else if (buttonName.match(/=/)) {
+    data.total = '';
+    data.next = '';
+    data.operation = '';
   } else {
-    operation.operation = buttonValue;
-    display.textContent += ` ${buttonValue} `;
+    operate(data.total, data.next, data.operation);
+    data.operation = buttonName;
+    display.textContent += ` ${buttonName} `;
   }
 };
 
