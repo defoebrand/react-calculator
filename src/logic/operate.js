@@ -1,7 +1,6 @@
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
-  const display = document.querySelector('.displayOutput');
   let result = '';
 
   const firstNumber = new Big(numberOne);
@@ -16,10 +15,10 @@ const operate = (numberOne, numberTwo, operation) => {
   } else if (operation === '/') {
     result = firstNumber.div(secondNumber);
   } else if (operation === '%') {
-    result = firstNumber.mod(secondNumber);
+    result = firstNumber.div(100);
   }
 
-  display.textContent = result;
+  return result;
 };
 
 export default operate;
