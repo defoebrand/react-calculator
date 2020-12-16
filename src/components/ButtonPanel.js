@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import Button from './Button';
 
 const buttonList = {
@@ -9,23 +8,17 @@ const buttonList = {
   group5: ['0', '.', '='],
 };
 
-const Panel = ({ clickHandler }) => (
+const buttons = Object.keys(buttonList).map(key => (
+  buttonList[key].map(value => (
+    <Button key={value} name={value} group={key} />
+  ))
+));
+
+const Panel = () => (
 
   <div className="buttonPanel">
-    {
-      Object.keys(buttonList).map(key => (
-        buttonList[key].map(value => (
-          <Button key={value} name={value} group={key} handleClick={clickHandler} />
-        ))))
-    }
+    {buttons}
   </div>
 );
-
-Panel.propTypes = {
-  clickHandler: PropTypes.func,
-};
-Panel.defaultProps = {
-  clickHandler: null,
-};
 
 export default Panel;
