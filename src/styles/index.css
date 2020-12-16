@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -24,4 +24,29 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+button {
+  margin: 2.5px;
+}
+
+
+.displayOutput {
+  text-align: right;
+  padding-right: 25px;
+  margin: 35px auto 15px;
+  width: 275px;
+}
+
+.buttonPanel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 200px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.group5 {
+  width: 30%;
 }
