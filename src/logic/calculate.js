@@ -1,11 +1,5 @@
 import operate from './operate';
 
-const calculatorData = {
-  total: 0,
-  next: 0,
-  operation: '',
-};
-
 const calculate = (calculatorData, buttonName) => {
   const data = calculatorData;
   const display = document.querySelector('.displayOutput');
