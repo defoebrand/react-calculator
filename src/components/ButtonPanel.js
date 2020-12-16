@@ -10,7 +10,7 @@ const buttonList = {
 
 const buttons = Object.keys(buttonList).map(key => (
   buttonList[key].map(value => (
-    <Button key={key} name={value} group={key} />
+    <Button key={value} name={value} group={key} />
   ))
 ));
 
