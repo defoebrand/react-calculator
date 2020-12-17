@@ -1,0 +1,864 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports['renders App correctly 1'] = `
+Array [
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fffddd",
+        "display": "flex",
+        "height": "50px",
+        "justifyContent": "space-around",
+        "width": "100vw",
+      }
+    }
+  >
+    <a
+      href="/"
+      style={
+        Object {
+          "cursor": "pointer",
+          "fontSize": "calc(15px + 1vw)",
+          "fontWeight": "bold",
+          "textDecoration": "none",
+        }
+      }
+    >
+      Home 
+    </a>
+    <a
+      href="/App"
+      style={
+        Object {
+          "cursor": "pointer",
+          "fontSize": "calc(15px + 1vw)",
+          "fontWeight": "bold",
+          "textDecoration": "none",
+        }
+      }
+    >
+      Calculator
+    </a>
+    <a
+      href="/Quote"
+      style={
+        Object {
+          "cursor": "pointer",
+          "fontSize": "calc(15px + 1vw)",
+          "fontWeight": "bold",
+          "textDecoration": "none",
+        }
+      }
+    >
+      Quote Of The Day
+    </a>
+  </div>,
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "space-between",
+        "margin": "0 auto",
+        "width": "80vw",
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "fontSize": "35px",
+          "margin": "25px 25px 0 15px",
+        }
+      }
+    >
+      Let's do some math!
+    </p>
+    <div
+      style={
+        Object {
+          "border": "1px solid black",
+          "display": "flex",
+          "flexDirection": "column",
+          "margin": "25px auto 0",
+          "minWidth": "700px",
+        }
+      }
+    >
+      <div
+        className="buttonPanel"
+        style={
+          Object {
+            "backgroundColor": "#d0d0d0",
+            "display": "flex",
+            "flexWrap": "wrap",
+            "lineHeight": "100px",
+          }
+        }
+      >
+        <button
+          className="button group1"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#dfdfdf",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          AC
+        </button>
+        <button
+          className="button group1"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#dfdfdf",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          +/-
+        </button>
+        <button
+          className="button group1"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#dfdfdf",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          %
+        </button>
+        <button
+          className="button group1"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#f49040",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          /
+        </button>
+        <button
+          className="button group2"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#dfdfdf",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          7
+        </button>
+        <button
+          className="button group2"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#dfdfdf",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          8
+        </button>
+        <button
+          className="button group2"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#dfdfdf",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          9
+        </button>
+        <button
+          className="button group2"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#f49040",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          x
+        </button>
+        <button
+          className="button group3"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#dfdfdf",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          4
+        </button>
+        <button
+          className="button group3"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#dfdfdf",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          5
+        </button>
+        <button
+          className="button group3"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#dfdfdf",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          6
+        </button>
+        <button
+          className="button group3"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#f49040",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          -
+        </button>
+        <button
+          className="button group4"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#dfdfdf",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          1
+        </button>
+        <button
+          className="button group4"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#dfdfdf",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          2
+        </button>
+        <button
+          className="button group4"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#dfdfdf",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          3
+        </button>
+        <button
+          className="button group4"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#f49040",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          +
+        </button>
+        <button
+          className="button group5"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#dfdfdf",
+              "width": "50%",
+            }
+          }
+          type="button"
+        >
+          0
+        </button>
+        <button
+          className="button group5"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#dfdfdf",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          .
+        </button>
+        <button
+          className="button group5"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#f49040",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          =
+        </button>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports['renders Button correctly 1'] = `
+<button
+  className="button Empty"
+  onClick={null}
+  style={
+    Object {
+      "backgroundColor": "#f49040",
+      "width": "25%",
+    }
+  }
+  type="button"
+>
+  Empty
+</button>
+`;
+
+exports['renders ButtonPanel correctly 1'] = `
+<div
+  className="buttonPanel"
+  style={
+    Object {
+      "backgroundColor": "#d0d0d0",
+      "display": "flex",
+      "flexWrap": "wrap",
+      "lineHeight": "100px",
+    }
+  }
+>
+  <button
+    className="button group1"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#dfdfdf",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    AC
+  </button>
+  <button
+    className="button group1"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#dfdfdf",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    +/-
+  </button>
+  <button
+    className="button group1"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#dfdfdf",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    %
+  </button>
+  <button
+    className="button group1"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#f49040",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    /
+  </button>
+  <button
+    className="button group2"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#dfdfdf",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    7
+  </button>
+  <button
+    className="button group2"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#dfdfdf",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    8
+  </button>
+  <button
+    className="button group2"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#dfdfdf",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    9
+  </button>
+  <button
+    className="button group2"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#f49040",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    x
+  </button>
+  <button
+    className="button group3"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#dfdfdf",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    4
+  </button>
+  <button
+    className="button group3"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#dfdfdf",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    5
+  </button>
+  <button
+    className="button group3"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#dfdfdf",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    6
+  </button>
+  <button
+    className="button group3"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#f49040",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    -
+  </button>
+  <button
+    className="button group4"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#dfdfdf",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="button group4"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#dfdfdf",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    2
+  </button>
+  <button
+    className="button group4"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#dfdfdf",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    3
+  </button>
+  <button
+    className="button group4"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#f49040",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    +
+  </button>
+  <button
+    className="button group5"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#dfdfdf",
+        "width": "50%",
+      }
+    }
+    type="button"
+  >
+    0
+  </button>
+  <button
+    className="button group5"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#dfdfdf",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    .
+  </button>
+  <button
+    className="button group5"
+    onClick={null}
+    style={
+      Object {
+        "backgroundColor": "#f49040",
+        "width": "25%",
+      }
+    }
+    type="button"
+  >
+    =
+  </button>
+</div>
+`;
+
+exports['renders Display correctly 1'] = `
+<div
+  className="displayContainer"
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#848592",
+      "color": "white",
+      "display": "flex",
+      "fontSize": "45px",
+      "fontWeight": "bold",
+      "height": "100px",
+      "justifyContent": "flex-end",
+      "paddingRight": "10px",
+      "textAlign": "right",
+    }
+  }
+>
+  <p
+    className="displayOutput"
+  />
+</div>
+`;
+
+exports['renders Home correctly 1'] = `
+Array [
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fffddd",
+        "display": "flex",
+        "height": "50px",
+        "justifyContent": "space-around",
+        "width": "100vw",
+      }
+    }
+  >
+    <a
+      href="/"
+      style={
+        Object {
+          "cursor": "pointer",
+          "fontSize": "calc(15px + 1vw)",
+          "fontWeight": "bold",
+          "textDecoration": "none",
+        }
+      }
+    >
+      Home 
+    </a>
+    <a
+      href="/App"
+      style={
+        Object {
+          "cursor": "pointer",
+          "fontSize": "calc(15px + 1vw)",
+          "fontWeight": "bold",
+          "textDecoration": "none",
+        }
+      }
+    >
+      Calculator
+    </a>
+    <a
+      href="/Quote"
+      style={
+        Object {
+          "cursor": "pointer",
+          "fontSize": "calc(15px + 1vw)",
+          "fontWeight": "bold",
+          "textDecoration": "none",
+        }
+      }
+    >
+      Quote Of The Day
+    </a>
+  </div>,
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "column",
+        "margin": "25px auto 0",
+        "width": "90vw",
+      }
+    }
+  >
+    <h1>
+      Math Magicians
+    </h1>
+    <h3>
+      Welcome to our page!
+    </h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui o!cia deserunt mollit anim id est laborum. Ipsu
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui o!cia deserunt mollit anim id est laborum. Ipsu
+    </p>
+  </div>,
+]
+`;
+
+exports['renders Navbar correctly 1'] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fffddd",
+      "display": "flex",
+      "height": "50px",
+      "justifyContent": "space-around",
+      "width": "100vw",
+    }
+  }
+>
+  <a
+    href="/"
+    style={
+      Object {
+        "cursor": "pointer",
+        "fontSize": "calc(15px + 1vw)",
+        "fontWeight": "bold",
+        "textDecoration": "none",
+      }
+    }
+  >
+    Home 
+  </a>
+  <a
+    href="/App"
+    style={
+      Object {
+        "cursor": "pointer",
+        "fontSize": "calc(15px + 1vw)",
+        "fontWeight": "bold",
+        "textDecoration": "none",
+      }
+    }
+  >
+    Calculator
+  </a>
+  <a
+    href="/Quote"
+    style={
+      Object {
+        "cursor": "pointer",
+        "fontSize": "calc(15px + 1vw)",
+        "fontWeight": "bold",
+        "textDecoration": "none",
+      }
+    }
+  >
+    Quote Of The Day
+  </a>
+</div>
+`;
+
+exports['renders Quote correctly 1'] = `
+Array [
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fffddd",
+        "display": "flex",
+        "height": "50px",
+        "justifyContent": "space-around",
+        "width": "100vw",
+      }
+    }
+  >
+    <a
+      href="/"
+      style={
+        Object {
+          "cursor": "pointer",
+          "fontSize": "calc(15px + 1vw)",
+          "fontWeight": "bold",
+          "textDecoration": "none",
+        }
+      }
+    >
+      Home 
+    </a>
+    <a
+      href="/App"
+      style={
+        Object {
+          "cursor": "pointer",
+          "fontSize": "calc(15px + 1vw)",
+          "fontWeight": "bold",
+          "textDecoration": "none",
+        }
+      }
+    >
+      Calculator
+    </a>
+    <a
+      href="/Quote"
+      style={
+        Object {
+          "cursor": "pointer",
+          "fontSize": "calc(15px + 1vw)",
+          "fontWeight": "bold",
+          "textDecoration": "none",
+        }
+      }
+    >
+      Quote Of The Day
+    </a>
+  </div>,
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "column",
+        "margin": "25px auto 0",
+        "width": "90vw",
+      }
+    }
+  >
+    <h1>
+      Math Magicians
+    </h1>
+    <h3>
+      Welcome to our page!
+    </h3>
+    <p>
+      Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding. –William Paul Thurston
+    </p>
+  </div>,
+]
+`;
