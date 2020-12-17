@@ -8,6 +8,7 @@ const App = () => {
   const [total, setTotal] = useState(null);
   const [next, setNext] = useState(null);
   const [operation, setOperation] = useState(null);
+  const [display, setDisplay] = useState(null);
 
   const handleClick = buttonName => {
     const result = calculate({ total, next, operation }, buttonName);
@@ -17,21 +18,18 @@ const App = () => {
   };
 
   useEffect(() => {
-    console.log(total + operation + next);
-  }, [total, next, operation]);
-
-  let display;
-  if (operation === null) {
-    if (total === null) {
-      display = <Display result="Hello!" />;
+    if (operation === null) {
+      if (total === null) {
+        setDisplay(<Display result="Hello!" />);
+      } else {
+        setDisplay(<Display result={`${total}`} />);
+      }
+    } else if (next === null) {
+      setDisplay(<Display result={`${total} ${operation}`} />);
     } else {
-      display = <Display result={`${total}`} />;
+      setDisplay(<Display result={`${total} ${operation} ${next}`} />);
     }
-  } else if (next === null) {
-    display = <Display result={`${total} ${operation}`} />;
-  } else {
-    display = <Display result={`${total} ${operation} ${next}`} />;
-  }
+  }, [total, next, operation]);
 
   return (
     <>
