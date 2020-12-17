@@ -11,8 +11,8 @@ Button.propTypes = {
   name: PropTypes.string,
   group: PropTypes.string,
   handleClick: PropTypes.func,
-  color: PropTypes.func,
-  wide: PropTypes.func,
+  color: PropTypes.string,
+  wide: PropTypes.bool,
 
 };
 Button.defaultProps = {
