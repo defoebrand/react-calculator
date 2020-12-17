@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
+import Navbar from './Navbar';
 
 import calculate from '../logic/calculate';
 
@@ -34,16 +35,25 @@ const App = () => {
   const style = {
     display: 'flex',
     flexDirection: 'column',
-    width: '700px',
+    minWidth: '700px',
     margin: '25px auto 0',
     border: '1px solid black',
   };
 
   return (
-    <div style={style}>
-      {display}
-      <ButtonPanel clickHandler={e => handleClick(e.target.innerText)} />
-    </div>
+    <>
+      <Navbar />
+      <div style={{
+        display: 'flex', justifyContent: 'space-between', width: '80vw', margin: '0 auto',
+      }}
+      >
+        <p style={{ fontSize: '35px', margin: '25px 25px 0 15px' }}>Let&apos;s do some math!</p>
+        <div style={style}>
+          {display}
+          <ButtonPanel clickHandler={e => handleClick(e.target.innerText)} />
+        </div>
+      </div>
+    </>
   );
 };
 
