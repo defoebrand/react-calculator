@@ -8,9 +8,8 @@ The project is a react calculator app designed to perform basic calculations. By
 
 #### Features
 
- -  Offers users easy to read large print buttons
- -  Utilizes a large print graphic display
- -  Incorporates every basic operator plus the modulo operator (instead of a percent key)
+ -  Offers users easy to read buttons
+ -  Utilizes a high contrast graphic display
 
 ###### Coming Features
  -  Enhanced syntax inputting
