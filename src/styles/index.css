@@ -31,11 +31,20 @@ code {
 }
 
 button {
-  margin: 2.5px;
-  width: 20%;
+  height: 100px;
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  border-radius: 2.5px;
+  font-size: 35px;
+  background-color: #dfdfdf;
 }
 
-.displayOutput {
+/* button {
+  margin: 2.5px;
+  width: 20%;
+} */
+
+/* .displayOutput {
   text-align: right;
   padding-right: 25px;
   margin: 35px auto 15px;
@@ -53,4 +62,4 @@ button {
 
 .group5 {
   width: 30%;
-}
+} */

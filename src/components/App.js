@@ -31,11 +31,19 @@ const App = () => {
     }
   }, [total, next, operation]);
 
+  const style = {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '700px',
+    margin: '25px auto 0',
+    border: '1px solid black',
+  };
+
   return (
-    <>
+    <div style={style}>
       {display}
       <ButtonPanel clickHandler={e => handleClick(e.target.innerText)} />
-    </>
+    </div>
   );
 };
 

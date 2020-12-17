@@ -9,13 +9,20 @@ const buttonList = {
   group5: ['0', '.', '='],
 };
 
+const style = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  lineHeight: '100px',
+  backgroundColor: '#d0d0d0',
+};
+
 const Panel = ({ clickHandler }) => (
 
-  <div className="buttonPanel">
+  <div className="buttonPanel" style={style}>
     {
       Object.keys(buttonList).map(key => (
         buttonList[key].map(value => (
-          <Button key={value} name={value} group={key} handleClick={clickHandler} />
+          <Button key={value} name={value} group={key} handleClick={clickHandler} color={['+', '-', 'x', '/', '='].includes(value) ? undefined : '#dfdfdf'} wide={['0'].includes(value) ? true : undefined} />
         ))))
     }
   </div>
