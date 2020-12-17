@@ -4,18 +4,17 @@
 
 The project is a react calculator app designed to perform basic calculations. By simply inputting a value, an operator, and another value it will return the final calculation of the input given.
 
-#### ![screenshot](src/assets/screenshot.png)
+![screenshot](src/assets/screenshot.png)
 
-#### Features 
+#### Features
 
- -  Offers users easy to read large print buttons
- -  Utilizes a large print graphic display 
- -  Incorporates every basic operator plus the modulo operator (instead of a percent key)
+ -  Offers users easy to read buttons
+ -  Utilizes a high contrast graphic display
 
-###### Coming Features 
+###### Coming Features
  -  Enhanced syntax inputting
  -  Display of previous calculations until cleared
- -  Enhanced styling 
+ -  Enhanced styling
 
  ## Built With
 
@@ -28,7 +27,7 @@ The project is a react calculator app designed to perform basic calculations. By
 
 
 ## Live Demo
-Try it out [here](https://herokuapp.calculator.com)
+Try it out [here](https://defoebrand-react-calculator.herokuapp.com)
 #### Deployed on: Heroku
 
 
