@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 
@@ -15,6 +15,10 @@ const App = () => {
     setNext(result.next);
     setOperation(result.operation);
   };
+
+  useEffect(() => {
+    console.log(total + operation + next);
+  }, [total, next, operation]);
 
   let display;
   if (operation === null) {
