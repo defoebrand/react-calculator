@@ -8,7 +8,7 @@ describe('if user presses AC key, calculate', () => {
       total: null, next: null, operation: null,
     });
   });
-  test('assigns null to all calculatorData', () => {
+  test("doesn't leave calculatorData unmutated", () => {
     expect(Calculate({
       total: 9, next: 6, operation: '+',
     }, 'AC')).not.toEqual({
@@ -32,7 +32,7 @@ describe('if user presses +/- key, calculate', () => {
       total: 9, next: -6, operation: '+',
     });
   });
-  test('multiplies the last digit put in by -1', () => {
+  test("doesn't multiply both digits by -1", () => {
     expect(Calculate({
       total: 9, next: 6, operation: '+',
     }, '+/-')).not.toEqual({
@@ -66,7 +66,7 @@ describe('before first numerical input', () => {
       total: 0, next: null, operation: '+',
     });
   });
-  test('if user presses + key, calculate adds to 0', () => {
+  test("if user presses + key, calculate doesn't leave total at null", () => {
     expect(Calculate({
       total: null, next: null, operation: null,
     }, '+')).not.toEqual({
@@ -80,7 +80,7 @@ describe('before first numerical input', () => {
       total: 0, next: null, operation: '-',
     });
   });
-  test('if user presses - key, calculate subtracts from 0', () => {
+  test("if user presses - key, calculate doesn't leave total at null", () => {
     expect(Calculate({
       total: null, next: null, operation: null,
     }, '-')).not.toEqual({
@@ -94,7 +94,7 @@ describe('before first numerical input', () => {
       total: 0, next: null, operation: 'x',
     });
   });
-  test('if user presses x key, calculate multiplies with 0', () => {
+  test("if user presses x key, calculate doesn't leave total at null", () => {
     expect(Calculate({
       total: null, next: null, operation: null,
     }, 'x')).not.toEqual({
@@ -108,7 +108,7 @@ describe('before first numerical input', () => {
       total: 0, next: null, operation: '/',
     });
   });
-  test('if user presses / key, calculate divides 0', () => {
+  test("if user presses / key, calculate doesn't leave total at null", () => {
     expect(Calculate({
       total: null, next: null, operation: null,
     }, '/')).not.toEqual({
@@ -125,7 +125,7 @@ describe('after first numerical input', () => {
       total: 9, next: null, operation: '+',
     });
   });
-  test('if user presses + key, calculate assigns + to operation', () => {
+  test("if user presses + key, calculate doesn't leave operation at null", () => {
     expect(Calculate({
       total: 9, next: null, operation: null,
     }, '+')).not.toEqual({
@@ -139,7 +139,7 @@ describe('after first numerical input', () => {
       total: 9, next: null, operation: '-',
     });
   });
-  test('if user presses - key, calculate assigns - to operation', () => {
+  test("if user presses - key, calculate doesn't leave operation at null", () => {
     expect(Calculate({
       total: 9, next: null, operation: null,
     }, '-')).not.toEqual({
@@ -153,7 +153,7 @@ describe('after first numerical input', () => {
       total: 9, next: null, operation: 'x',
     });
   });
-  test('if user presses x key, calculate assigns * to operation', () => {
+  test("if user presses x key, calculate doesn't leave operation at null", () => {
     expect(Calculate({
       total: 9, next: null, operation: null,
     }, 'x')).not.toEqual({
@@ -167,7 +167,7 @@ describe('after first numerical input', () => {
       total: 9, next: null, operation: '/',
     });
   });
-  test('if user presses / key, calculate assigns / to operation', () => {
+  test("if user presses / key, calculate doesn't leave operation at null", () => {
     expect(Calculate({
       total: 9, next: null, operation: null,
     }, '/')).not.toEqual({
@@ -191,7 +191,7 @@ describe('if user presses a number key before the operator', () => {
       total: '96', next: null, operation: null,
     });
   });
-  test('but after first numerical input, calculate appends that digit to the end of total', () => {
+  test("but after first numerical input, calculate doesn't reassign that input to total", () => {
     expect(Calculate({
       total: '9', next: null, operation: null,
     }, '6')).not.toEqual({
@@ -215,7 +215,7 @@ describe('if user presses a number key after the operator', () => {
       total: '9', next: '66', operation: '+',
     });
   });
-  test('and after first new numerical input, calculate appends that digit to the end of next', () => {
+  test("and after first new numerical input, calculate doesn't reassign that value to next", () => {
     expect(Calculate({
       total: '9', next: '6', operation: '+',
     }, '6')).not.toEqual({
@@ -246,7 +246,7 @@ describe('if user presses . key before the operator', () => {
       total: '9.', next: null, operation: null,
     });
   });
-  test('but after a previous . input, calculate does nothing', () => {
+  test('but after a previous . input, calculate does not add a second .', () => {
     expect(Calculate({
       total: '9.', next: null, operation: null,
     }, '.')).not.toEqual({
@@ -277,7 +277,7 @@ describe('if user presses . key after the operator', () => {
       total: '9', next: '6.', operation: '+',
     });
   });
-  test('but after a previous . input, calculate does nothing', () => {
+  test('but after a previous . input, calculate does not add a second .', () => {
     expect(Calculate({
       total: '9', next: '6.', operation: '+',
     }, '.')).not.toEqual({
@@ -301,7 +301,7 @@ describe('if user presses = key', () => {
       total: 15, next: null, operation: null,
     });
   });
-  test('after assigning an operation, calculate performs the operation and sets next / operation to null', () => {
+  test('after assigning an operation, calculate performs the operation and does not leave next or operation unmutated', () => {
     expect(Calculate({
       total: '9', next: '6', operation: '+',
     }, '=')).not.toEqual({

@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 const Navbar = () => {
   const style = {
     width: '100vw',
@@ -17,9 +15,9 @@ const Navbar = () => {
   };
   return (
     <div style={style}>
-      <Link style={linkStyle} to="/">Home </Link>
-      <Link style={linkStyle} to="/App">Calculator</Link>
-      <Link style={linkStyle} to="/Quote">Quote Of The Day</Link>
+      <a style={linkStyle} href="/">Home </a>
+      <a style={linkStyle} href="/App">Calculator</a>
+      <a style={linkStyle} href="/Quote">Quote Of The Day</a>
     </div>
   );
 };
