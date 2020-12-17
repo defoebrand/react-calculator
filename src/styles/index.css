@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0 auto;
   font-family:
@@ -28,14 +32,14 @@ code {
 
 button {
   margin: 2.5px;
+  width: 20%;
 }
-
 
 .displayOutput {
   text-align: right;
   padding-right: 25px;
   margin: 35px auto 15px;
-  width: 275px;
+  width: 270px;
 }
 
 .buttonPanel {

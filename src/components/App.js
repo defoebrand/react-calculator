@@ -28,17 +28,18 @@ class App extends React.Component {
     render() {
       const { next, total, operation } = this.state;
       let display;
-      if (next) {
-        display = <Display result={`${next}`} />;
+      if (operation === null) {
+        if (total === null) {
+          display = <Display result="Hello!" />;
+        } else {
+          display = <Display result={`${total}`} />;
+        }
+      } else if (next === null) {
+        display = <Display result={`${total} ${operation}`} />;
       } else {
-        display = <Display result="Hello!" />;
-      }
-      if (operation) {
-        display = <Display result={`${next} ${operation}`} />;
-      }
-      if (total) {
         display = <Display result={`${total} ${operation} ${next}`} />;
       }
+
       return (
         <>
 
