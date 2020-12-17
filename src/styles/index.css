@@ -31,26 +31,14 @@ code {
 }
 
 button {
-  margin: 2.5px;
-  width: 20%;
+  height: 100px;
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  border-radius: 2.5px;
+  font-size: 35px;
+  background-color: #dfdfdf;
 }
 
-.displayOutput {
-  text-align: right;
-  padding-right: 25px;
-  margin: 35px auto 15px;
-  width: 270px;
-}
-
-.buttonPanel {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  height: 200px;
-  width: 300px;
-  margin: 0 auto;
-}
-
-.group5 {
-  width: 30%;
+p {
+  font-size: 20px;
 }
