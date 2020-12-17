@@ -1,53 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 
 import calculate from '../logic/calculate';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-    };
-    this.handleClick.bind(this);
-  }
+const App = () => {
+  const [total, setTotal] = useState(null);
+  const [next, setNext] = useState(null);
+  const [operation, setOperation] = useState(null);
+  const [display, setDisplay] = useState(null);
 
-    handleClick = buttonName => {
-      const data = this.state;
-      const result = calculate(data, buttonName);
-      this.setState({
-        total: result.total,
-        next: result.next,
-        operation: result.operation,
-      });
-    }
+  const handleClick = buttonName => {
+    const result = calculate({ total, next, operation }, buttonName);
+    setTotal(result.total);
+    setNext(result.next);
+    setOperation(result.operation);
+  };
 
-    render() {
-      const { next, total, operation } = this.state;
-      let display;
-      if (operation === null) {
-        if (total === null) {
-          display = <Display result="Hello!" />;
-        } else {
-          display = <Display result={`${total}`} />;
-        }
-      } else if (next === null) {
-        display = <Display result={`${total} ${operation}`} />;
+  useEffect(() => {
+    if (operation === null) {
+      if (total === null) {
+        setDisplay(<Display result="Hello!" />);
       } else {
-        display = <Display result={`${total} ${operation} ${next}`} />;
+        setDisplay(<Display result={`${total}`} />);
       }
-
-      return (
-        <>
-
-          {display}
-          <ButtonPanel clickHandler={e => this.handleClick(e.target.innerText)} />
-        </>
-      );
+    } else if (next === null) {
+      setDisplay(<Display result={`${total} ${operation}`} />);
+    } else {
+      setDisplay(<Display result={`${total} ${operation} ${next}`} />);
     }
-}
+  }, [total, next, operation]);
+
+  return (
+    <>
+      {display}
+      <ButtonPanel clickHandler={e => handleClick(e.target.innerText)} />
+    </>
+  );
+};
 
 export default App;
