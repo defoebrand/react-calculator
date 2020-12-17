@@ -4,7 +4,7 @@
 
 The project is a react calculator app designed to perform basic calculations. By simply inputting a value, an operator, and another value it will return the final calculation of the input given.
 
-###### Screenshot coming soon!
+![screenshot](src/assets/screenshot.png)
 
 #### Features
 
